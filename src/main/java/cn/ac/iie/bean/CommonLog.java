@@ -11,6 +11,7 @@ public class CommonLog {
     private int common_policy_id;
     private String common_user_tags;
     private int common_action;
+    private String common_sub_action;
     private String common_user_region;
     private String common_client_ip;
     private int common_client_port;
@@ -133,6 +134,14 @@ public class CommonLog {
     private String streaming_media_protocol;
 
     public CommonLog() {
+    }
+
+    public String getCommon_sub_action() {
+        return common_sub_action;
+    }
+
+    public void setCommon_sub_action(String common_sub_action) {
+        this.common_sub_action = common_sub_action;
     }
 
     public String getCommon_schema_type() {
@@ -1021,122 +1030,5 @@ public class CommonLog {
 
     public void setStreaming_media_protocol(String streaming_media_protocol) {
         this.streaming_media_protocol = streaming_media_protocol;
-    }
-
-    @Override
-    public String toString() {
-        return "CommonLog{" +
-                "common_service=" + common_service +
-                ", common_direction=" + common_direction +
-                ", common_l4_protocol='" + common_l4_protocol + '\'' +
-                ", common_address_type=" + common_address_type +
-                ", common_schema_type='" + common_schema_type + '\'' +
-                ", common_policy_id=" + common_policy_id +
-                ", common_user_tags='" + common_user_tags + '\'' +
-                ", common_action=" + common_action +
-                ", common_user_region='" + common_user_region + '\'' +
-                ", common_client_ip='" + common_client_ip + '\'' +
-                ", common_client_port=" + common_client_port +
-                ", common_entrance_id=" + common_entrance_id +
-                ", common_device_id='" + common_device_id + '\'' +
-                ", common_link_id=" + common_link_id +
-                ", common_isp='" + common_isp + '\'' +
-                ", common_encapsulation=" + common_encapsulation +
-                ", common_sled_ip='" + common_sled_ip + '\'' +
-                ", common_server_ip='" + common_server_ip + '\'' +
-                ", common_server_port=" + common_server_port +
-                ", common_app_label='" + common_app_label + '\'' +
-                ", common_c2s_pkt_num=" + common_c2s_pkt_num +
-                ", common_s2c_pkt_num=" + common_s2c_pkt_num +
-                ", common_c2s_byte_num=" + common_c2s_byte_num +
-                ", common_s2c_byte_num=" + common_s2c_byte_num +
-                ", common_start_time=" + common_start_time +
-                ", common_end_time=" + common_end_time +
-                ", common_con_duration_ms=" + common_con_duration_ms +
-                ", common_stream_dir=" + common_stream_dir +
-                ", common_address_list='" + common_address_list + '\'' +
-                ", common_has_dup_traffic=" + common_has_dup_traffic +
-                ", common_stream_error='" + common_stream_error + '\'' +
-                ", common_stream_trace_id='" + common_stream_trace_id + '\'' +
-                ", http_url='" + http_url + '\'' +
-                ", http_host='" + http_host + '\'' +
-                ", http_request_line='" + http_request_line + '\'' +
-                ", http_response_line='" + http_response_line + '\'' +
-                ", http_request_header='" + http_request_header + '\'' +
-                ", http_response_header='" + http_response_header + '\'' +
-                ", http_request_body='" + http_request_body + '\'' +
-                ", http_response_body='" + http_response_body + '\'' +
-                ", http_request_body_key='" + http_request_body_key + '\'' +
-                ", http_response_body_key='" + http_response_body_key + '\'' +
-                ", http_proxy_flag=" + http_proxy_flag +
-                ", http_sequence=" + http_sequence +
-                ", http_snapshot='" + http_snapshot + '\'' +
-                ", http_cookie='" + http_cookie + '\'' +
-                ", http_referer='" + http_referer + '\'' +
-                ", http_user_agent='" + http_user_agent + '\'' +
-                ", http_content_length='" + http_content_length + '\'' +
-                ", http_content_type='" + http_content_type + '\'' +
-                ", http_set_cookie='" + http_set_cookie + '\'' +
-                ", http_version='" + http_version + '\'' +
-                ", mail_protocol_type='" + mail_protocol_type + '\'' +
-                ", mail_sender='" + mail_sender + '\'' +
-                ", mail_receiver='" + mail_receiver + '\'' +
-                ", mail_subject='" + mail_subject + '\'' +
-                ", mail_content='" + mail_content + '\'' +
-                ", mail_attachment_name='" + mail_attachment_name + '\'' +
-                ", mail_attachment_content='" + mail_attachment_content + '\'' +
-                ", mail_eml_file='" + mail_eml_file + '\'' +
-                ", mail_snapshot='" + mail_snapshot + '\'' +
-                ", dns_message_id=" + dns_message_id +
-                ", dns_qr=" + dns_qr +
-                ", dns_opcode=" + dns_opcode +
-                ", dns_aa=" + dns_aa +
-                ", dns_tc=" + dns_tc +
-                ", dns_rd=" + dns_rd +
-                ", dns_ra=" + dns_ra +
-                ", dns_rcode=" + dns_rcode +
-                ", dns_qdcount=" + dns_qdcount +
-                ", dns_ancount=" + dns_ancount +
-                ", dns_nscount=" + dns_nscount +
-                ", dns_arcount=" + dns_arcount +
-                ", dns_qname='" + dns_qname + '\'' +
-                ", dns_qtype=" + dns_qtype +
-                ", dns_qclass=" + dns_qclass +
-                ", dns_cname='" + dns_cname + '\'' +
-                ", dns_sub=" + dns_sub +
-                ", dns_rr='" + dns_rr + '\'' +
-                ", ssl_version='" + ssl_version + '\'' +
-                ", ssl_sni='" + ssl_sni + '\'' +
-                ", ssl_san='" + ssl_san + '\'' +
-                ", ssl_cn='" + ssl_cn + '\'' +
-                ", ssl_pinningst=" + ssl_pinningst +
-                ", ssl_intercept_state=" + ssl_intercept_state +
-                ", ssl_server_side_latency=" + ssl_server_side_latency +
-                ", ssl_client_side_latency=" + ssl_client_side_latency +
-                ", ssl_server_side_version='" + ssl_server_side_version + '\'' +
-                ", ssl_client_side_version='" + ssl_client_side_version + '\'' +
-                ", ssl_cert_verify=" + ssl_cert_verify +
-                ", ssl_error='" + ssl_error + '\'' +
-                ", ssl_con_latency_ms=" + ssl_con_latency_ms +
-                ", ftp_url='" + ftp_url + '\'' +
-                ", ftp_content='" + ftp_content + '\'' +
-                ", bgp_type=" + bgp_type +
-                ", bgp_as_num='" + bgp_as_num + '\'' +
-                ", bgp_route='" + bgp_route + '\'' +
-                ", voip_calling_account='" + voip_calling_account + '\'' +
-                ", voip_called_account='" + voip_called_account + '\'' +
-                ", voip_calling_number='" + voip_calling_number + '\'' +
-                ", voip_called_number='" + voip_called_number + '\'' +
-                ", radius_packet_type=" + radius_packet_type +
-                ", radius_nas_ip='" + radius_nas_ip + '\'' +
-                ", radius_framed_ip='" + radius_framed_ip + '\'' +
-                ", radius_account='" + radius_account + '\'' +
-                ", radius_session_timeout=" + radius_session_timeout +
-                ", radius_idle_timeout=" + radius_idle_timeout +
-                ", radius_acct_status_type=" + radius_acct_status_type +
-                ", radius_acct_terminate_cause=" + radius_acct_terminate_cause +
-                ", streaming_media_url='" + streaming_media_url + '\'' +
-                ", streaming_media_protocol='" + streaming_media_protocol + '\'' +
-                '}';
     }
 }

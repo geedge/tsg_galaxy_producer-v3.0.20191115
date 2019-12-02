@@ -17,6 +17,7 @@ public class GetLogData {
     private static String[] commonSchemaTypes ={"HTTP","MAIL","DNS","SSL","FTP","BGP","VOIP"};
     //动作  0：无动作 1：检测 2：拦截 4：丢弃 16：阻断 48：操控（重定向、限速、替换、Hijack、Inject） 128：白名单
     private static int[]  commonActions = {0,1,2,4,16,48,128};
+    private static String commonSubActionS[] = {"redirect","replace","hijack","insert"};
     private static String isps[] = {"CMCC","China Telecom","China Unicom"};
     //原始二层封装格式   0:以太网   8:PPP  12:Cisco HDLC
     private static int[] common_encapsulations = {0,8,12};
@@ -335,6 +336,8 @@ public class GetLogData {
         commonLog.setCommon_user_tags(GetLogFieldDataUtil.makeRandomString(100));
         //动作
         commonLog.setCommon_action(commonActions[new Random().nextInt(commonActions.length)]);
+        //子动作
+        commonLog.setCommon_sub_action(commonSubActionS[new Random().nextInt(commonSubActionS.length)]);
         //用户自定义域
         commonLog.setCommon_user_region(GetLogFieldDataUtil.makeRandomString(100));
 
